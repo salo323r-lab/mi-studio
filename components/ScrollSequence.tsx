@@ -97,24 +97,18 @@ export default function ScrollSequence() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const canvasRatio = canvas.width / canvas.height;
-        const imgRatio = img.width / img.height;
+        const scaleX = canvas.width / img.width;
+        const scaleY = canvas.height / img.height;
 
-        let drawWidth, drawHeight, offsetX, offsetY;
+        const isMobile = window.innerWidth < 768;
+        // On mobile, use 'cover' to fill screen. On desktop, use 'contain' to see full object.
+        const scale = isMobile ? Math.max(scaleX, scaleY) : Math.min(scaleX, scaleY);
 
-        if (canvasRatio > imgRatio) {
-            // Canvas is wider than image -> fit height
-            drawHeight = canvas.height;
-            drawWidth = img.width * (canvas.height / img.height);
-            offsetX = (canvas.width - drawWidth) / 2;
-            offsetY = 0;
-        } else {
-            // Canvas is taller than image -> fit width
-            drawWidth = canvas.width;
-            drawHeight = img.height * (canvas.width / img.width);
-            offsetX = 0;
-            offsetY = (canvas.height - drawHeight) / 2;
-        }
+        const drawWidth = img.width * scale;
+        const drawHeight = img.height * scale;
+
+        const offsetX = (canvas.width - drawWidth) / 2;
+        const offsetY = (canvas.height - drawHeight) / 2;
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         // Draw background color to ensure no transparency artifacts
