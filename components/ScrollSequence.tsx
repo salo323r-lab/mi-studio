@@ -101,7 +101,8 @@ export default function ScrollSequence() {
         const scaleY = canvas.height / img.height;
 
         const isMobile = window.innerWidth < 768;
-        // On mobile, use 'cover' to fill screen. On desktop, use 'contain' to see full object.
+        // Force 'cover' on mobile to fill screen (crop edges). 'contain' on desktop.
+        // We use Math.max for cover (scales until both dimensions fit, cropping excess).
         const scale = isMobile ? Math.max(scaleX, scaleY) : Math.min(scaleX, scaleY);
 
         const drawWidth = img.width * scale;
