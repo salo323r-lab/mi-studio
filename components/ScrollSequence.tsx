@@ -175,31 +175,31 @@ export default function ScrollSequence() {
                         {/* Beat B — 25–45% Scroll */}
                         <TextOverlay progress={scrollYProgress} range={[0.25, 0.45]} align="left">
                             <h2 className="text-6xl md:text-8xl font-bold text-white/90">
-                                Зачіски від
+                                У нас зручні крісла
                             </h2>
                             <p className="mt-4 text-2xl text-white/60">
-                                300 грн
+                                Твій затишок
                             </p>
                         </TextOverlay>
 
                         {/* Beat C — 50–70% Scroll */}
                         <TextOverlay progress={scrollYProgress} range={[0.50, 0.70]} align="right">
                             <h2 className="text-6xl md:text-8xl font-bold text-white/90">
-                                Манікюр від
+                                Сервіс
                             </h2>
-                            <p className="mt-4 text-2xl text-white/60">
-                                600 грн
+                            <p className="mt-4 text-xl md:text-2xl text-white/60 max-w-lg ml-auto">
+                                Сертифіковані і ввічливі майстри
                             </p>
                         </TextOverlay>
 
                         {/* Beat D — 75–95% Scroll */}
                         <TextOverlay progress={scrollYProgress} range={[0.75, 0.95]}>
                             <h2 className="text-6xl md:text-8xl font-bold text-white/90">
-                                Готові змінитись?
+                                Зручне розташування
                             </h2>
-                            <button className="mt-8 px-8 py-4 bg-white text-black text-lg font-bold tracking-wider hover:bg-gray-200 transition-colors rounded-full">
-                                Записатись на прийом
-                            </button>
+                            <p className="mt-8 text-xl text-white/60 font-light tracking-widest uppercase animate-bounce">
+                                Гортай донизу ↓
+                            </p>
                         </TextOverlay>
                     </>
                 )}
