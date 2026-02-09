@@ -161,43 +161,46 @@ export default function ScrollSequence() {
                     <>
                         {/* Beat A — 0–20% Scroll */}
                         <TextOverlay progress={scrollYProgress} range={[0.0, 0.20]}>
-                            <h1 className="text-7xl md:text-9xl font-bold text-white/90 tracking-tighter">
+                            <h1 className="text-5xl md:text-9xl font-bold text-white/90 tracking-tighter">
                                 Сьогодні сяємо
                             </h1>
-                            <p className="mt-4 text-xl md:text-2xl text-white/60 font-light tracking-wide">
+                            <p className="mt-4 text-lg md:text-2xl text-white/60 font-light tracking-wide px-4">
                                 Твоя персональна майстерня краси
                             </p>
-                            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/30 text-sm tracking-widest uppercase">
+                            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/30 text-xs md:text-sm tracking-widest uppercase">
                                 Scroll to Explore
                             </div>
                         </TextOverlay>
 
                         {/* Beat B — 25–45% Scroll */}
+                        {/* Beat B — 25–45% Scroll */}
                         <TextOverlay progress={scrollYProgress} range={[0.25, 0.45]} align="left">
-                            <h2 className="text-6xl md:text-8xl font-bold text-white/90">
+                            <h2 className="text-4xl md:text-8xl font-bold text-white/90">
                                 У нас зручні крісла
                             </h2>
-                            <p className="mt-4 text-2xl text-white/60">
+                            <p className="mt-4 text-xl md:text-2xl text-white/60">
                                 Твій затишок
                             </p>
                         </TextOverlay>
 
                         {/* Beat C — 50–70% Scroll */}
+                        {/* Beat C — 50–70% Scroll */}
                         <TextOverlay progress={scrollYProgress} range={[0.50, 0.70]} align="right">
-                            <h2 className="text-6xl md:text-8xl font-bold text-white/90">
+                            <h2 className="text-4xl md:text-8xl font-bold text-white/90">
                                 Сервіс
                             </h2>
-                            <p className="mt-4 text-xl md:text-2xl text-white/60 max-w-lg ml-auto">
+                            <p className="mt-4 text-lg md:text-2xl text-white/60 max-w-xs md:max-w-lg ml-auto">
                                 Сертифіковані і ввічливі майстри
                             </p>
                         </TextOverlay>
 
                         {/* Beat D — 75–95% Scroll */}
+                        {/* Beat D — 75–95% Scroll */}
                         <TextOverlay progress={scrollYProgress} range={[0.75, 0.95]}>
-                            <h2 className="text-6xl md:text-8xl font-bold text-white/90">
+                            <h2 className="text-4xl md:text-8xl font-bold text-white/90">
                                 Зручне розташування
                             </h2>
-                            <p className="mt-8 text-xl text-white/60 font-light tracking-widest uppercase animate-bounce">
+                            <p className="mt-8 text-lg md:text-xl text-white/60 font-light tracking-widest uppercase animate-bounce">
                                 Гортай донизу ↓
                             </p>
                         </TextOverlay>
